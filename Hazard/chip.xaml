@@ -1,0 +1,44 @@
+﻿<s:SurfaceUserControl x:Class="Hazard.chip"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008">
+    <Grid>
+        <Grid Name="DialGrid" Background="Transparent" Margin="0,0,0,0">
+            <Grid.RenderTransformOrigin>
+                <Point X="0.5" Y="0.5"/>
+            </Grid.RenderTransformOrigin>
+
+            <Grid.RenderTransform>
+                <RotateTransform x:Name="DialRotateTransform" Angle="180" CenterX="0" CenterY="0"/>
+            </Grid.RenderTransform>
+            
+
+                <Ellipse x:Name="Ellipse" Width="100" Height="100" Stretch="Fill" StrokeLineJoin="Round" Stroke="Black">
+                <Ellipse.Fill>
+                        <RadialGradientBrush RadiusX="0.5" RadiusY="0.5" Center="0.5,0.5" GradientOrigin="0.5,0.5">
+                            <RadialGradientBrush.GradientStops>
+                                <GradientStop Color="#FFED0707" Offset="0.385593"/>
+                                <GradientStop Color="#FFD50808" Offset="0.538136"/>
+                                <GradientStop Color="#FFCB0808" Offset="0.932203"/>
+                                <GradientStop Color="#FFA40707" Offset="0.95339"/>
+                                <GradientStop Color="#FF4C0202" Offset="1"/>
+                            </RadialGradientBrush.GradientStops>
+                            <RadialGradientBrush.RelativeTransform>
+                                <TransformGroup/>
+                            </RadialGradientBrush.RelativeTransform>
+                        </RadialGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+            
+            <Ellipse x:Name="GlowRing" Width="75" Height="75" StrokeThickness="4" Stroke="DeepPink" Visibility="Hidden">
+                <Ellipse.BitmapEffect>
+                    <BlurBitmapEffect Radius="5" />
+                </Ellipse.BitmapEffect>
+            </Ellipse>
+        </Grid>
+        <Label Name="BigStatusLabel" 
+               FontSize="28" 
+               Content="150" Foreground="AntiqueWhite" HorizontalAlignment="Center" Width="57.477" Height="49.176" VerticalAlignment="Center" />
+        
+    </Grid>
+</s:SurfaceUserControl>

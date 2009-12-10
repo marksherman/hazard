@@ -1,0 +1,79 @@
+﻿<s:SurfaceUserControl x:Class="Hazard.ControlPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008">
+    <Grid Name="PanelGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Name="BettingPanelGrid" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <s:SurfaceButton Name="StartBetButton" Grid.Row="0">Start Bet</s:SurfaceButton>
+            <s:SurfaceButton Name="EndBetButton" Grid.Row="1">Done Bet</s:SurfaceButton>
+
+        </Grid>
+
+        <Grid Name="DieGrid1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <s:SurfaceButton Name="DieButton1" Grid.Row="0" Grid.Column="0">1</s:SurfaceButton>
+            <s:SurfaceButton Name="DieButton2" Grid.Row="0" Grid.Column="1">2</s:SurfaceButton>
+            <s:SurfaceButton Name="DieButton3" Grid.Row="0" Grid.Column="2">3</s:SurfaceButton>
+            <s:SurfaceButton Name="DieButton4" Grid.Row="1" Grid.Column="0">4</s:SurfaceButton>
+            <s:SurfaceButton Name="DieButton5" Grid.Row="1" Grid.Column="1">5</s:SurfaceButton>
+            <s:SurfaceButton Name="DieButton6" Grid.Row="1" Grid.Column="2">6</s:SurfaceButton>
+        </Grid>
+
+        <Grid Name="PassPanelGrid" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <s:SurfaceButton Name="PassButton" Grid.Row="0">Pass</s:SurfaceButton>
+            <s:SurfaceButton Name="FailButton" Grid.Row="1">Fail</s:SurfaceButton>
+
+        </Grid>
+
+        <Grid Name="DieGrid2" Grid.Column="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <s:SurfaceButton Name="Die2Button1" Grid.Row="0" Grid.Column="0">1</s:SurfaceButton>
+            <s:SurfaceButton Name="Die2Button2" Grid.Row="0" Grid.Column="1">2</s:SurfaceButton>
+            <s:SurfaceButton Name="Die2Button3" Grid.Row="0" Grid.Column="2">3</s:SurfaceButton>
+            <s:SurfaceButton Name="Die2Button4" Grid.Row="1" Grid.Column="0">4</s:SurfaceButton>
+            <s:SurfaceButton Name="Die2Button5" Grid.Row="1" Grid.Column="1">5</s:SurfaceButton>
+            <s:SurfaceButton Name="Die2Button6" Grid.Row="1" Grid.Column="2">6</s:SurfaceButton>
+        </Grid>
+
+        <Label Name="Status" Grid.Row="1" Grid.ColumnSpan="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Status</Label>
+    </Grid>
+</s:SurfaceUserControl>
